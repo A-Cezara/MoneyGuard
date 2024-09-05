@@ -1,16 +1,12 @@
-export const App = () => {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import LandingPage from 'pages/LandingPage/LandingPage';
+import Modal from './Modal/Modal';
+
+export default function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Modal header={{ title: 'Money Guard' }} />
+    </>
   );
-};
+}

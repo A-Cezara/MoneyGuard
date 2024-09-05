@@ -1,0 +1,86 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    220deg,
+    rgba(109, 84, 235, 0.73) 28.31%,
+    rgba(101, 35, 146, 0.73) 66.76%
+  );
+}
+
+.modal {
+  width: 90%;
+  max-width: 533px;
+  padding: 62px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(50px);
+  border: none;
+  border-radius: 8px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 36px;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: var(--white, #fbfbfb);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  width: auto;
+  height: 0px;
+  padding: 10px;
+  stroke-width: 1px;
+  background: none;
+  border: none;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
