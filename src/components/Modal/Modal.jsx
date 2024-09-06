@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Modal.module.css';
+import { Link } from 'react-router-dom';
+import PasswordInput from 'components/PasswordInput';
 
 export default function Modal({ header }) {
   const imagePath = '/images/MGlogo.svg';
@@ -17,25 +19,45 @@ export default function Modal({ header }) {
         </header>
         <main className={styles.content}>
           <form className={styles.form}>
-            <input
-              type="email"
-              placeholder="Email"
-              className={styles.input}
-              required
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              className={styles.input}
-              required
-            />
+            <div className={styles.inputContainer}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_7_132)">
+                  <path
+                    d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                    fill="white"
+                    fill-opacity="0.4"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_7_132">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <input
+                type="email"
+                placeholder="E-mail"
+                className={styles.input}
+                required
+              />
+            </div>
+            <PasswordInput />
             <div className={styles.buttons}>
-              <button type="submit" className={styles.button}>
-                Login
-              </button>
-              <button type="button" className={styles.button}>
+              <Link to="/MoneyGuard/MainPage" className={styles.button}>
+                Log in
+              </Link>
+              <Link
+                to="/MoneyGuard/RegisterPage"
+                className={`${styles.button} ${styles.secondary}`}
+              >
                 Register
-              </button>
+              </Link>
             </div>
           </form>
         </main>
